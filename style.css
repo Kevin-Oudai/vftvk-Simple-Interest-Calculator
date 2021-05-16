@@ -19,22 +19,26 @@ h1 {
   margin: auto;
 }
 
-form {
-  width: 325px;
+
+.container {
+  display: grid;
+  width: 350px;
   margin: auto;
+  row-gap: 0.6em;
 }
 
-.formElement {
+.container > div {
   display: grid;
-  grid-template-columns: 40% 60%;
-  justify-self: start;
-  margin-bottom: 0.75em;
+  grid-template-columns: 35% 65%;
+
 }
 
 #years {
   justify-self: start;
 }
 
-#principal {
-  justify-self: start;
+
+footer {
+  padding-top: 10px;
+
 }
