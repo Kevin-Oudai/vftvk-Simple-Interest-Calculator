@@ -19,6 +19,7 @@ h1 {
   margin: auto;
 }
 
+
 .container {
   display: grid;
   width: 350px;
@@ -29,12 +30,15 @@ h1 {
 .container > div {
   display: grid;
   grid-template-columns: 35% 65%;
+
 }
 
 #years {
   justify-self: start;
 }
 
+
 footer {
   padding-top: 10px;
+
 }
