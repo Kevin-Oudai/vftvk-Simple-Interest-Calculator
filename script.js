@@ -22,5 +22,6 @@ function compute() {
 // This updates the value of the percentage used in the span for the interest rate.
 function updateRate() {
   var rateval = document.getElementById("rate").value;
+  rateval = parseFloat(rateval).toFixed(2);
   document.getElementById("rate_val").innerText = rateval + "%";
 }
