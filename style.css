@@ -30,6 +30,7 @@ h1 {
 .container > div {
   display: grid;
   grid-template-columns: 35% 65%;
+
 }
 
 /* Justifying the years input reduces the size of the widget. */
@@ -37,8 +38,10 @@ h1 {
   justify-self: start;
 }
 
+
 footer {
   padding-top: 10px;
+
 }
 
 /* This highlights the numbers when they are displayed with result span */
