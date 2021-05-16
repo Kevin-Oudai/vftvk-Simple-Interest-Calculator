@@ -19,7 +19,7 @@ h1 {
   margin: auto;
 }
 
-
+/* Gave the container a grid display to easily lay out the rest of the form */
 .container {
   display: grid;
   width: 350px;
@@ -33,6 +33,7 @@ h1 {
 
 }
 
+/* Justifying the years input reduces the size of the widget. */
 #years {
   justify-self: start;
 }
@@ -43,6 +44,7 @@ footer {
 
 }
 
+/* This highlights the numbers when they are displayed with result span */
 span > span {
   background-color: yellow;
 }
