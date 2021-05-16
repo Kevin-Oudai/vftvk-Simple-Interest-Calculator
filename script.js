@@ -1,6 +1,7 @@
 function compute() {
   var principal = document.getElementById("principal").value;
-  if (principal <= 0) {
+  // This is were the validation of the principal is done.
+  if (principal <= 0 || principal == "") {
     alert("Enter a positive number");
     document.getElementById("principal").value = "";
     document.getElementById("principal").focus();
@@ -18,6 +19,7 @@ function compute() {
   }
 }
 
+// This updates the value of the percentage used in the span for the interest rate.
 function updateRate() {
   var rateval = document.getElementById("rate").value;
   document.getElementById("rate_val").innerText = rateval + "%";

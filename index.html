@@ -9,14 +9,19 @@
   <body>
     <div class="maindiv">
       <h1>Simple Interest Calculator</h1>
+      <!-- Container to format the form widgets and labels -->
       <div class="container">
+        <!-- Each div at this level will contain one line of the form. -->
         <div>
           <label for="principal">Amount</label>
           <input type="number" id="principal" />
         </div>
+
         <div>
           <label for="rate">Interest Rate</label>
           <div>
+            <!-- everytime the slider is moved an oninput event is triggered which
+              causes instant updates to span as compared to onchange -->
             <input
               type="range"
               id="rate"
@@ -29,6 +34,7 @@
             <span id="rate_val">10.25%</span>
           </div>
         </div>
+
         <div>
           <label for="years">No. of Years</label>
           <select id="years">
@@ -44,9 +50,11 @@
             <option value="10">10</option>
           </select>
         </div>
+
         <div>
           <button id="button" onclick="compute()">Compute Interest</button>
         </div>
+
         <span id="result"></span>
       </div>
 
