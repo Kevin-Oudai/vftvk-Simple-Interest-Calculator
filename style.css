@@ -18,3 +18,23 @@ h1 {
   border-radius: 25px;
   margin: auto;
 }
+
+form {
+  width: 325px;
+  margin: auto;
+}
+
+.formElement {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-self: start;
+  margin-bottom: 0.75em;
+}
+
+#years {
+  justify-self: start;
+}
+
+#principal {
+  justify-self: start;
+}
