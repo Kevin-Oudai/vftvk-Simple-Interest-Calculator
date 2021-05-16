@@ -38,3 +38,7 @@ h1 {
 footer {
   padding-top: 10px;
 }
+
+span > span {
+  background-color: yellow;
+}
