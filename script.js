@@ -5,7 +5,9 @@ function compute() {
     alert("Enter a positive number");
     document.getElementById("principal").value = "";
     document.getElementById("principal").focus();
-  } else {
+  } 
+  // Gets the remaining values, completes the calculation and returns the result
+  else {
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var interest = (principal * years * rate) / 100;
