@@ -1,7 +1,33 @@
-# Course Project
+# Simple Interest Calculator
 
-This is a project for the course Introduction to Cloud Development with HTML5, CSS3 and JavaScript. The goal is to produce a simple interest calculator using html, css and javascript.
+A small web application for computing simple or compound interest. Users can
+enter an amount, interest rate, time period and see the future value of their
+deposit. The calculator supports multiple currency symbols, input validation and
+allows results to be reset easily.
 
-You can view the result at the [project page](https://kevin-oudai.github.io/vftvk-Simple-Interest-Calculator/)
+## Setup
 
-All code and objectives for the project was completed on the 16th May 2021.
+### Open Locally
+1. Clone this repository.
+2. Open `index.html` in your browser.
+
+### GitHub Pages
+1. Fork the repository on GitHub.
+2. Enable GitHub Pages in the repository settings, using the `main` branch and
+   the root directory.
+3. Visit the generated URL to use the app online.
+
+## Manual Testing Checklist
+
+- [ ] Compute simple interest with positive numbers.
+- [ ] Compute compound interest with positive numbers.
+- [ ] Attempt to submit empty or negative values (errors should display).
+- [ ] Use different currencies and verify the output symbol.
+- [ ] Reset clears all inputs and results.
+- [ ] Edge cases: 0% rate, long time periods.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for
+details. Original work by Kevin Oudai.
+

@@ -1,28 +1,37 @@
+:root {
+  --background: black;
+  --text: white;
+  --card-background: white;
+  --card-text: black;
+  --heading: grey;
+  --highlight: yellow;
+  --error: red;
+}
+
 body {
-  background-color: black;
-  font-family: arial;
-  color: white;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-  color: grey;
-  font-family: verdana;
+  color: var(--heading);
   text-align: center;
 }
 
 .maindiv {
-  background-color: white;
-  color: black;
-  width: 500px;
+  background-color: var(--card-background);
+  color: var(--card-text);
+  max-width: 500px;
   padding: 20px;
   border-radius: 25px;
   margin: auto;
 }
 
-/* Gave the container a grid display to easily lay out the rest of the form */
+/* Layout for the form elements */
 .container {
   display: grid;
-  width: 350px;
+  max-width: 350px;
   margin: auto;
   row-gap: 0.6em;
 }
@@ -30,21 +39,45 @@ h1 {
 .container > div {
   display: grid;
   grid-template-columns: 35% 65%;
-
 }
 
-/* Justifying the years input reduces the size of the widget. */
-#years {
+/* Align time selector */
+#time {
   justify-self: start;
 }
 
-
 footer {
   padding-top: 10px;
-
 }
 
-/* This highlights the numbers when they are displayed with result span */
+/* Highlight computed numbers */
 span > span {
-  background-color: yellow;
+  background-color: var(--highlight);
 }
+
+/* Error message styling */
+.error {
+  color: var(--error);
+  font-size: 0.8em;
+  grid-column: 2 / 3;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .maindiv {
+    width: 90%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .container > div {
+    grid-template-columns: 1fr;
+  }
+
+  .error {
+    grid-column: 1 / 2;
+  }
+}
+
