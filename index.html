@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Web App - Simple Interest Calculator</title>
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <div class="maindiv">
+    <!-- Main container for the calculator -->
+    <main class="maindiv">
       <h1>Simple Interest Calculator</h1>
-      <!-- Container to format the form widgets and labels -->
-      <div class="container">
-        <!-- Each div at this level will contain one line of the form. -->
+
+      <!-- Form section for user inputs -->
+      <section class="container">
+        <!-- Deposit amount -->
         <div>
           <label for="principal">Amount</label>
           <input type="number" id="principal" />
+          <span id="principal-error" class="error"></span>
         </div>
 
+        <!-- Currency selector -->
+        <div>
+          <label for="currency">Currency</label>
+          <select id="currency">
+            <option value="$">$</option>
+            <option value="TT$">TT$</option>
+            <option value="£">£</option>
+          </select>
+        </div>
+
+        <!-- Interest rate slider -->
         <div>
           <label for="rate">Interest Rate</label>
           <div>
-            <!-- everytime the slider is moved an oninput event is triggered which
-              causes instant updates to span as compared to onchange -->
             <input
               type="range"
               id="rate"
@@ -33,11 +46,13 @@
             />
             <span id="rate_val">10.25%</span>
           </div>
+          <span id="rate-error" class="error"></span>
         </div>
 
+        <!-- Time in years -->
         <div>
-          <label for="years">No. of Years</label>
-          <select id="years">
+          <label for="time">No. of Years</label>
+          <select id="time">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -49,16 +64,44 @@
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
+          <span id="time-error" class="error"></span>
         </div>
 
+        <!-- Interest calculation type -->
+        <div>
+          <label>Interest Type</label>
+          <div>
+            <label
+              ><input
+                type="radio"
+                name="interestType"
+                value="simple"
+                checked
+              />
+              Simple</label
+            >
+            <label
+              ><input type="radio" name="interestType" value="compound" />
+              Compound</label
+            >
+          </div>
+        </div>
+
+        <!-- Buttons -->
         <div>
           <button id="button" onclick="compute()">Compute Interest</button>
+          <button type="button" id="reset" onclick="resetForm()">Reset</button>
         </div>
 
-        <span id="result"></span>
-      </div>
+        <!-- Display area for results -->
+        <div>
+          <span id="result"></span>
+        </div>
+      </section>
 
+      <!-- Footer information -->
       <footer>&#169; Everyone Can Get Rich</footer>
-    </div>
+    </main>
   </body>
 </html>
+
